@@ -8,7 +8,7 @@ interface BotResponseProps {
 
 const BotResponse: React.FC<BotResponseProps> = ({ response }) => {
   return (
-    <div className='bot-response flex items-start space-x-8'>
+    <div className='bot-response flex items-start space-x-4'>
       <div className='flex-shrink-0'>
         <Avatar imageUrl="/bot_avatar.png" />
       </div>

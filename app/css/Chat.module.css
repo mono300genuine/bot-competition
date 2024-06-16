@@ -4,8 +4,8 @@
 
 .chatHistory {
   overflow-y: auto;
-  max-height: 1000px;
-  margin-top: 200px;
+  max-height: 800px;
+  margin-top: 80px;
   padding-right: 10px;
 }
 

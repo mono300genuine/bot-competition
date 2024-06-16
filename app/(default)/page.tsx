@@ -30,22 +30,6 @@ const ChatPage: React.FC = () => {
       alert('Failed to fetch response from API');
     }
   };
-  const sayHello = async () => {
-    const response = await fetch('api/hello', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ question }),
-    });
-
-    if (response.ok) {
-      const data = await response.json();
-      setQuestion('Say Hello');
-    } else {
-      console.error('Failed to fetch response from API');
-    }
-  };
 
   useEffect(() => {
     if (chatEndRef.current) {
@@ -60,7 +44,7 @@ const ChatPage: React.FC = () => {
         question={question}
         setQuestion={setQuestion}
       />
-      <div className={styles.chatHistory}>
+      <div className='chat-history overflow-y-auto p-4 mt-32'>
         {chatHistory.map((chat, index) => (
           <ChatResult key={index} question={chat.question} response={chat.response} />
         ))}

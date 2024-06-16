@@ -14,12 +14,15 @@ const ChatResult: React.FC<ChatResultProps> = ({ question, response }) => {
     let currentIndex = 0;
     const interval = setInterval(() => {
       if (currentIndex < response.length) {
-        setDisplayedResponse((prev) => prev + response[currentIndex]);
+        const char = response[currentIndex];
+        if (char !== undefined) {
+          setDisplayedResponse((prev) => prev + char);
+        }
         currentIndex += 1;
       } else {
         clearInterval(interval);
       }
-    }, 30); 
+    }, 50);
 
     return () => clearInterval(interval);
   }, [response]);

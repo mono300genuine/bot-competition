@@ -1,8 +1,11 @@
 .chatPage {
-  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .chatHistory {
+  flex: 1;
   overflow-y: auto;
   height: 800px;
   margin-top: 80px;

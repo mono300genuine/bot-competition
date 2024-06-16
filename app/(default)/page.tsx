@@ -10,6 +10,8 @@ const ChatPage: React.FC = () => {
   const [chatHistory, setChatHistory] = useState<{ question: string; response: string }[]>([]);
 
   const handleSendMessage = async () => {
+    if (!question.trim()) return;
+
     const response = await fetch('api/generate', {
       method: 'POST',
       headers: {
@@ -24,7 +26,7 @@ const ChatPage: React.FC = () => {
       setChatHistory([...chatHistory, { question, response: answer }]);
       setQuestion('');
     } else {
-      console.error('Failed to fetch response from API');
+      alert('Failed to fetch response from API');
     }
   };
   const sayHello = async () => {

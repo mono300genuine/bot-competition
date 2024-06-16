@@ -19,7 +19,7 @@ const ChatResult: React.FC<ChatResultProps> = ({ question, response }) => {
       } else {
         clearInterval(interval);
       }
-    }, 50); // Adjust the delay to control the streaming speed
+    }, 30); 
 
     return () => clearInterval(interval);
   }, [response]);

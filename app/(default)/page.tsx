@@ -33,7 +33,7 @@ const ChatPage: React.FC = () => {
 
   useEffect(() => {
     if (chatEndRef.current) {
-      chatEndRef.current.scrollIntoView({ behavior: 'auto' });
+      chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [chatHistory]);
 
@@ -50,8 +50,10 @@ const ChatPage: React.FC = () => {
             <ChatResult key={index} question={chat.question} response={chat.response} />
           ))}
         </div>
+        <br />
+        <div ref={chatEndRef} />
       </div>
-      <div ref={chatEndRef} />
+      
     </>
   );
 };

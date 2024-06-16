@@ -32,7 +32,7 @@ const ChatResult: React.FC<ChatResultProps> = ({ question, response }) => {
       <div className='flex w-4/5 mx-auto text-white justify-end mt-4'>
         <UserQuestion question={question} />
       </div>
-      <div className='w-4/5 mx-auto text-white mt-12'>
+      <div className='w-3/5 mx-auto text-white mt-12'>
         <BotResponse response={displayedResponse} />
       </div>
     </div>

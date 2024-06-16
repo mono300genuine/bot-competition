@@ -1,10 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
 import Title from '../atoms/Title';
 import Input from '../atoms/Input';
-import Button from '../atoms/Button';
-import SendBtn from '@/public/send.png'
-
 interface UserActionProps {
   onSubmit: () => void;
   question: string;
@@ -21,7 +17,7 @@ const UserAction: React.FC<UserActionProps> = ({ onSubmit, question, setQuestion
         <Input
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
-          onEnterPress={onSubmit} // Pass the onSubmit function as onEnterPress
+          onEnterPress={onSubmit} 
         />
       </div>
     </div>

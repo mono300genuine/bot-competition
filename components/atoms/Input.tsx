@@ -6,7 +6,7 @@ interface InputProps {
   onEnterPress: () => void;
 }
 
-const Input: React.FC<InputProps> = ({ value, onChange }) => {
+const Input: React.FC<InputProps> = ({ value, onChange, onEnterPress }) => {
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if ( e.key === 'Enter') {
       e.preventDefault();
@@ -19,7 +19,7 @@ const Input: React.FC<InputProps> = ({ value, onChange }) => {
       type="text"
       value={value}
       onChange={onChange}
-      onKeyPress={handleKeyDown}
+      onKeyDown={handleKeyDown}
       className="w-full border boder-gray-200 px-4 py-4 rounded-2xl bg-transparent text-white text-xl"
        placeholder="Type your question..."
     />

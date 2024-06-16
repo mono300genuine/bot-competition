@@ -1,6 +1,7 @@
 import React from 'react';
 import Title from '../atoms/Title';
 import Input from '../atoms/Input';
+
 interface UserActionProps {
   onSubmit: () => void;
   question: string;
@@ -9,15 +10,15 @@ interface UserActionProps {
 
 const UserAction: React.FC<UserActionProps> = ({ onSubmit, question, setQuestion }) => {
   return (
-    <div className="user-action">
-      <div className='absoulute flex justify-center items-center top-4 text-4xl font-bold'>
+    <div className="user-action fixed bottom-0 left-0 w-full bg-gray-800 p-4 flex flex-col items-center space-y-4">
+      <div className='text-4xl font-bold'>
         <Title text="Simple ChatGPT" color="#fff" />
       </div>
-      <div className="flex flex-row justify-center items-center">
+      <div className="flex flex-row justify-center items-center space-x-4">
         <Input
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
-          onEnterPress={onSubmit} 
+          onEnterPress={onSubmit}
         />
       </div>
     </div>

@@ -20,7 +20,7 @@ const Input: React.FC<InputProps> = ({ value, onChange, onEnterPress }) => {
       value={value}
       onChange={onChange}
       onKeyDown={handleKeyDown}
-      className="w-full border boder-gray-200 px-4 py-4 rounded-2xl bg-transparent text-white text-xl"
+      className="w-full border boder-gray-200 px-4 py-4 rounded-2xl bg-gray-900 text-white text-xl"
       placeholder="Type your question..."
     />
   );

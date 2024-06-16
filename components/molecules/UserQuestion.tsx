@@ -11,7 +11,7 @@ const UserQuestion: React.FC<UserQuestionProps> = ({ question }) => {
     <div className="flex user-question space-x-8">
       <DivText text={question} />
       <div className='flex-shrink-0'>
-        <Avatar imageUrl="/bot_avatar.png" />
+        <Avatar imageUrl="/user_avatar.png" />
       </div>
     </div>
   );

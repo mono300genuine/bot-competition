@@ -5,7 +5,7 @@ interface DivTextProps {
 }
 
 const DivText: React.FC<DivTextProps> = ({ text }) => {
-  return <div className='text-2xl border border-gray-100 rounded-md px-12 py-4 object-cover'>
+  return <div className='w-3/5 text-2xl border border-gray-100 rounded-md px-12 py-4 object-cover'>
     {text}
   </div>;
 };

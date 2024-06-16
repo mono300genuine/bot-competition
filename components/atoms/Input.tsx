@@ -2,13 +2,14 @@ import React, { ChangeEvent, KeyboardEvent } from 'react';
 
 interface InputProps {
   value: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  onEnterPress: () => void;  
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onEnterPress: () => void;
 }
 
-const Input: React.FC<InputProps> = ({ value, onChange, onEnterPress }) => {
-  const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
+const Input: React.FC<InputProps> = ({ value, onChange }) => {
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if ( e.key === 'Enter') {
+      e.preventDefault();
       onEnterPress();
     }
   };
@@ -18,11 +19,15 @@ const Input: React.FC<InputProps> = ({ value, onChange, onEnterPress }) => {
       type="text"
       value={value}
       onChange={onChange}
-      onKeyPress={handleKeyPress} 
-      className="input-class"
-      placeholder="Type your question..."
+      onKeyPress={handleKeyDown}
+      className="w-full border boder-gray-200 px-4 py-4 rounded-2xl bg-transparent text-white text-xl"
+       placeholder="Type your question..."
     />
   );
 };
 
 export default Input;
+function onEnterPress() {
+  throw new Error('Function not implemented.');
+}
+

@@ -59,3 +59,10 @@ h1 {
 .title-text {
   font-size: larger;
 }
+
+.chat-result {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 1200px;
+}

@@ -49,11 +49,10 @@ const ChatPage: React.FC = () => {
           {chatHistory.map((chat, index) => (
             <ChatResult key={index} question={chat.question} response={chat.response} />
           ))}
+          <br />
+          <div ref={chatEndRef} />
         </div>
-        <br />
-        <div ref={chatEndRef} />
       </div>
-      
     </>
   );
 };

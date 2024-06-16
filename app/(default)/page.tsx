@@ -44,7 +44,7 @@ const ChatPage: React.FC = () => {
         question={question}
         setQuestion={setQuestion}
       />
-      <div className='flex justfiy-center items-center overflow-y-auto p-4 mt-32'>
+      <div className='chatHistory overflow-y-auto p-4 mt-32'>
         {chatHistory.map((chat, index) => (
           <ChatResult key={index} question={chat.question} response={chat.response} />
         ))}

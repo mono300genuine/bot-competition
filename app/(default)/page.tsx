@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import UserAction from '@/components/molecules/UserAction';
 import ChatResult from '@/components/organisms/ChatResult';
 import styles from "@/app/css/Chat.module.css";
@@ -8,6 +8,7 @@ import styles from "@/app/css/Chat.module.css";
 const ChatPage: React.FC = () => {
   const [question, setQuestion] = useState('');
   const [chatHistory, setChatHistory] = useState<{ question: string; response: string }[]>([]);
+  const chatEndRef = useRef<HTMLDivElement>(null);
 
   const handleSendMessage = async () => {
     if (!question.trim()) return;
@@ -46,6 +47,12 @@ const ChatPage: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    if (chatEndRef.current) {
+      chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [chatHistory]);
+
   return (
     <div className={styles.chatPage}>
       <UserAction
@@ -57,6 +64,7 @@ const ChatPage: React.FC = () => {
         {chatHistory.map((chat, index) => (
           <ChatResult key={index} question={chat.question} response={chat.response} />
         ))}
+        <div ref={chatEndRef} />
       </div>
     </div>
   );

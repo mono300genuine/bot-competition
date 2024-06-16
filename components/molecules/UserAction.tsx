@@ -10,7 +10,7 @@ interface UserActionProps {
 
 const UserAction: React.FC<UserActionProps> = ({ onSubmit, question, setQuestion }) => {
   return (
-    <div className="user-action fixed top-0 left-0 w-full bg-gray-800 p-4 flex flex-col items-center space-y-4 z-10">
+    <div className="user-action fixed top-0 w-full p-4 flex flex-col items-center space-y-4 z-10">
       <div className='text-4xl font-bold'>
         <Title text="Simple ChatGPT" color="#fff" />
       </div>

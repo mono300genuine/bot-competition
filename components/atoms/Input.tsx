@@ -8,7 +8,7 @@ interface InputProps {
 
 const Input: React.FC<InputProps> = ({ value, onChange, onEnterPress }) => {
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    if ( e.key === 'Enter') {
+    if (e.key === 'Enter') {
       e.preventDefault();
       onEnterPress();
     }
@@ -21,7 +21,7 @@ const Input: React.FC<InputProps> = ({ value, onChange, onEnterPress }) => {
       onChange={onChange}
       onKeyDown={handleKeyDown}
       className="w-full border boder-gray-200 px-4 py-4 rounded-2xl bg-transparent text-white text-xl"
-       placeholder="Type your question..."
+      placeholder="Type your question..."
     />
   );
 };

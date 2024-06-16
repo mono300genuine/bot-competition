@@ -1,0 +1,16 @@
+.chatPage {
+  padding: 20px;
+}
+
+.chatHistory {
+  overflow-y: auto;
+  max-height: 500px;
+  margin-top: 20px;
+  padding-right: 10px;
+}
+
+.user-action {
+  position: fixed;
+  bottom: 20px;
+  width: calc(100% - 40px);
+}

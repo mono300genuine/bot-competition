@@ -14,7 +14,7 @@ const UserAction: React.FC<UserActionProps> = ({ onSubmit, question, setQuestion
       <div className='text-4xl font-bold'>
         <Title text="Simple ChatGPT" color="#fff" />
       </div>
-      <div className="flex w-4/5 justify-center items-center space-x-4">
+      <div className="flex w-full justify-center items-center space-x-4 mx-auto p-auto">
         <Input
           value={question}
           onChange={(e) => setQuestion(e.target.value)}

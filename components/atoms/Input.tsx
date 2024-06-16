@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { ChangeEvent, KeyboardEvent } from 'react';
 
 interface InputProps {
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onEnterPress: () => void;  
 }
 
-const Input: React.FC<InputProps> = ({ value, onChange }) => {
+const Input: React.FC<InputProps> = ({ value, onChange, onEnterPress }) => {
+  const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      onEnterPress();
+    }
+  };
+
   return (
-    <input 
-      type="text" 
-      value={value} 
-      onChange={onChange} 
-      className="w-4/5 border boder-gray-200 px-4 py-4 rounded-2xl bg-transparent text-white text-xl"
+    <input
+      type="text"
+      value={value}
+      onChange={onChange}
+      onKeyPress={handleKeyPress} 
+      className="input-class"
+      placeholder="Type your question..."
     />
   );
 };

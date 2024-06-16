@@ -8,7 +8,7 @@ interface UserQuestionProps {
 
 const UserQuestion: React.FC<UserQuestionProps> = ({ question }) => {
   return (
-    <div className="flex user-question items-end space-x-4">
+    <div className="flex user-question justify-end space-x-4">
       <DivText text={question} />
       <div className='flex-shrink-0'>
         <Avatar imageUrl="/user_avatar.png" />

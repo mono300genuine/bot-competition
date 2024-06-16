@@ -10,7 +10,9 @@ const UserQuestion: React.FC<UserQuestionProps> = ({ question }) => {
   return (
     <div className="flex user-question space-x-8">
       <DivText text={question} />
-      <Avatar imageUrl="/user_avatar.png" />
+      <div className='flex-shrink-0'>
+        <Avatar imageUrl="/bot_avatar.png" />
+      </div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ const Avatar: React.FC<AvatarProps> = ({ imageUrl }) => {
       alt="avatar"
       width={40}
       height={40}
-      className="rounded-full border border-gray"
+      className="rounded-full border border-gray object-cover"
     />
     <style jsx>{`
       img {

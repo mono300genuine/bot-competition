@@ -9,7 +9,9 @@ interface BotResponseProps {
 const BotResponse: React.FC<BotResponseProps> = ({ response }) => {
   return (
     <div className='bot-response flex space-x-8'>
-      <Avatar imageUrl="/bot_avatar.png" />
+      <div>
+        <Avatar imageUrl="/bot_avatar.png" />
+      </div>
       <DivText text={response} />
     </div>
   );

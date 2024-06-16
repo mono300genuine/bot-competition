@@ -51,7 +51,6 @@ const ChatPage: React.FC = () => {
         question={question}
         setQuestion={setQuestion}
       />
-      
       <div className={styles.chatHistory}>
         {chatHistory.map((chat, index) => (
           <ChatResult key={index} question={chat.question} response={chat.response} />

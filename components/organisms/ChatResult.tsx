@@ -10,10 +10,10 @@ interface ChatResultProps {
 const ChatResult: React.FC<ChatResultProps> = ({ question, response }) => {
   return (
     <div className="chat-result">
-      <div className='mx-auto text-white mt-12'>
+      <div className='w-4/5 mx-auto text-white mt-12'>
         <BotResponse response={response} />
       </div>
-      <div className='absolute mx-auto text-white right-0'>
+      <div className='w-4/5 mx-auto text-white right-0'>
         <UserQuestion question={question} />
       </div>
     </div>

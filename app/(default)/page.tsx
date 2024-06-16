@@ -33,24 +33,26 @@ const ChatPage: React.FC = () => {
 
   useEffect(() => {
     if (chatEndRef.current) {
-      chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+      chatEndRef.current.scrollIntoView({ behavior: 'auto' });
     }
   }, [chatHistory]);
 
   return (
-    <div className={styles.chatPage}>
-      <UserAction
-        onSubmit={handleSendMessage}
-        question={question}
-        setQuestion={setQuestion}
-      />
-      <div className='chatHistory overflow-y-auto p-4 mt-32'>
-        {chatHistory.map((chat, index) => (
-          <ChatResult key={index} question={chat.question} response={chat.response} />
-        ))}
+    <>
+      <div className={styles.chatPage}>
+        <UserAction
+          onSubmit={handleSendMessage}
+          question={question}
+          setQuestion={setQuestion}
+        />
+        <div className='chatHistory overflow-y-auto p-4 mt-32'>
+          {chatHistory.map((chat, index) => (
+            <ChatResult key={index} question={chat.question} response={chat.response} />
+          ))}
+        </div>
       </div>
       <div ref={chatEndRef} />
-    </div>
+    </>
   );
 };
 

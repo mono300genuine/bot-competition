@@ -1,18 +1,30 @@
 {
-  "name": "open-pro-next",
+  "name": "simple-chatbot",
   "version": "0.1.0",
   "private": true,
+  "description": "A simple chatbot using Next.js and OpenAI API",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mono300genuine/bot-competition.git"
+  },
+  "keywords": [
+    "nextjs",
+    "typescript",
+    "chatbot",
+    "openai"
+  ],
   "overrides": {
     "next-contentlayer": {
       "next": "$next"
     }
   },
+  "author": "mono300genuine",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
